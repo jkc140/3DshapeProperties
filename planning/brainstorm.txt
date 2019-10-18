@@ -1,0 +1,28 @@
+This doc is basically pseudocode determining what the program will do.
+
+
+Program starts
+Ask for characteristics of 3d shape
+  - Ask for the shape
+  - Ask for length
+  - ask for width
+  - ask for height
+  - ask if they have radius or diameter
+      - ask for radius 
+      - ask for diameter 
+      
+using the shape they input it will use the corresponding volume equation
+calculate the volume
+calculate the surface area
+
+return the volume and surface area to the user
+
+ask user if they want to enter another shape
+
+program ends
+
+
+
+
+
+- GUI ??? <-- later, if time is available
