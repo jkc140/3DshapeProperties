@@ -7,7 +7,7 @@ BA()=
     BA(double base, double height)=b*h/2
 SA()=
   -if prism
-    
+    SA=(double base, double depth,sidA)=2b*d+sidA
   -if pyramdic
     -if cone
       SA(double base,double depth,double sL)=base+pi*r*s
@@ -25,4 +25,3 @@ Other()
   totSidA(array sL,double d )= for(int x=0;x<len.sL;x++){
       double holder=0;
       holder=holder+sL[x]*d
-    SA=(double base, double depth,sidA)=2b*d+sidA
