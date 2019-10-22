@@ -1,1 +1,42 @@
+Ask user for input
+  - user puts in base shape type
+  - user puts in 3d shape type
+  
+  - user enters depth of the 3d shape
+  
+Ask the user for the characteristics of the shape based on their input for the base shape 
+  - if circle
+    - radius
+    - ask for side length of pyramid 
+  - if rectangle
+    - length
+    - width
+  - if triangle
+    - base
+    - height
+    - side length 1
+    - side length 2
 
+Calculate the area of the base
+  - if circle 
+    - pi*r*r
+  - if rectangle
+    - lw
+  - if triangle
+    - bh/2
+    
+Calculate volume
+  - if prism
+    - base*depth
+  - if pyramid
+    - base*depth/3
+Calculate SA
+  if prism
+    - base+sidelength[x]*depth+...
+  if pyramid
+    - if cone
+      - pi*r*r+pi*r*s
+    - if non cone
+      - base+sidelength[x]*depth+...
+Return values to user
+ask user if they want to use the program again
