@@ -10,12 +10,12 @@ package prop3dshapes;
  * @author S331474817
  */
 public class triangle extends shape2d{
-    public void data(){
-        double sL1;
-        double sL2;
-        double base;
-        double height;
-    }
+   
+    public double sL1;
+    public double sL2;
+    public double base;
+    public double height;
+   
     public double area(double b, double h){
         return b*h/2;
     }
