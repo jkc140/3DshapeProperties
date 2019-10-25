@@ -31,20 +31,8 @@ public class shape3d {
       System.out.println("What is the height of the 3d shape");
       depth=sc.nextDouble();
     }
-    protected void getBA(int shape){
-      switch(shape){
-        case 0:
-          BA=triangle.area(tempReplace,tempReplace);
-          break;
-        case 1:
-          BA=circle.area(circle.getRad());
-          break;
-        case 2:
-          BA=rectangle.area(tempReplace,tempReplace);
-          break;
-        default:
-          System.out.println("Error area not found");
-      }
+    public static void getBA(double a){
+        BA=a;
     }
     
     
