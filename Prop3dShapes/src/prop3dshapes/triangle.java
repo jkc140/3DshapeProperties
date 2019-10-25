@@ -15,7 +15,7 @@ public class triangle extends shape2d{
     public double height;
     public double[] sL=new double[3];
             
-    public double area(double b, double h){
+    public static double area(double b, double h){
         return b*h/2;
     }
 }
