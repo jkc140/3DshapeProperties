@@ -9,10 +9,10 @@ package prop3dshapes;
  *
  * @author S331474817
  */
-public class rectangle {
+public class rectangle extends shape2d{
     public double length;
     public double width;
-    public double area(double l, double w){
+    public static double area(double l, double w){
         return l*w;
     }
 }
