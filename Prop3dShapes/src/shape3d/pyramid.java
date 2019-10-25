@@ -1,4 +1,5 @@
 package shape3d;
+import java.util.Scanner;
 
 public class pyramid extends shape3d{
   public double BA;
@@ -6,19 +7,17 @@ public class pyramid extends shape3d{
   public double v;
   public double sH;
   public double s;
-  public double sidA(int sNum,double[] sLen){
-    double tempA=0;
-    for(int x=0;x<sNum;x++){
-      tempA=tempA+(sLen[x]*sH);
-    }
-    return tempA;
-  }
-  public void volume(double d){
-    v=BA*d/3;
-  }
-  public void SA(int sNum, double[] sLen){
-      s=BA+sidA(sNum,sLen);
 
+  public void getSidH(){
+      Scanner sc = new Scanner(System.in);
+      System.out.println("What is the side height of the pyramid");
+      sH=sc.nextDouble();
+  }
+  public double volume(double d){
+    return BA*d/3;
+  }
+  public double SA(int sNum, double[] sLen ){
+    return BA+shape3d.sidA(sNum,sLen,sH);
   }
 
 }
