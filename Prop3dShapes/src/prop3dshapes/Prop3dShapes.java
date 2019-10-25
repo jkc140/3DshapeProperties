@@ -5,7 +5,8 @@
  */
 package prop3dshapes;
 import shape3d.*;
-import java.util.Scanner();
+
+import java.util.Scanner;
 /**
  *
  * @author S331474817
@@ -17,33 +18,34 @@ public class Prop3dShapes {
      */
     public static void main(String[] args) {
       Scanner sc=new Scanner(System.in);
-      int shape;
+      triangle trig = new triangle();
+      circle circ=new circle();
+      rectangle rect=new rectangle();
+      String shape;
       double BA;
-      bool shLoop=false;
+      boolean shLoop=false;
         // TODO code application logic here
         System.out.println("Program Commencing");
         System.out.println("What is the base shape of the 3d shape?");
         do{
-          shape=sc.nextInt();
-          shape=shape.toLowerCase();
-          switch(shape){
+          shape=sc.nextLine();
+          switch(shape.toLowerCase()){
             case "triangle":
-
-              triangle.BA();
+              trig.area(5,30);
               shLoop=true;
-              break
+              break;
             case "circle":
 
-              BA=circle.BA(circle.getRad());
+              BA=circ.area(circ.getRad());
               shLoop=true;
-              break
+              break;
             case "rectangle":
-              rectangle.BA();
+              rect.area(50,50);
               shLoop=true;
-              break
+              break;
             default:
-              System.out.println("Not a valid base shape.")
-              System.out.println("Please try again.")
+              System.out.println("Not a valid base shape.");
+              System.out.println("Please try again.");
             }
 
         }while(shLoop==true);
