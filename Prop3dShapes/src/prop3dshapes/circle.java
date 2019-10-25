@@ -5,12 +5,18 @@
  */
 package prop3dshapes;
 import java.math.*;
+import java.util.Scanner();
+
 /**
  *
  * @author S331474817
  */
 public class circle extends shape2d{
-    public double radius;
+    public double getRad(){
+      Scanner sc=new Scanner(System.in);
+      System.out.println("What is the radius of the circle?: ");
+      return sc.nextDouble
+    }
     public double area(double r){
         return r*r*Math.PI;
     }
