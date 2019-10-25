@@ -10,22 +10,12 @@ package shape3d;
  * @author S331474817
  */
 public class Prism {
-    public double BA;
-    private double v;
-    private double s;
-    protected double depth;
-    public void volume(){
-        v=BA*depth;
+    public double volume(){
+        return shape3d.BA*shape3d.depth;
     }
-    public double sidA(int sNum,double[] sLen ){
-        double tempA=0;
-        for(int x=0;x<sNum;x++){
-           tempA=tempA+sLen[x]*depth;
-        }
-        return tempA;
-    }
-    public void SA(int sNum,double[]sLen){
-        s=(2*BA)+sidA(sNum,sLen);
+    
+    public double SA(int sNum,double[]sLen,double d){
+        return(2*shape3d.BA)+shape3d.sidA(sNum,sLen,d);
     }
     
 }
