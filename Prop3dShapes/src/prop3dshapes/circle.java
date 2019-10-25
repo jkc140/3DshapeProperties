@@ -11,12 +11,14 @@ import java.util.Scanner;
  * @author S331474817
  */
 public class circle extends shape2d{
-    public double getRad(){
+    public static double getRad(){
+      
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the radius of the circle?: ");
-      return sc.nextDouble();
+      double r=sc.nextDouble();
+      return r;
     }
-    public double area(double r){
+    public static double area(double r){
         return r*r*Math.PI;
     }
 }
