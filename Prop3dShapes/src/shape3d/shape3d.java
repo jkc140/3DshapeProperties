@@ -11,9 +11,15 @@ import prop3dshapes.*;
  * @author S331474817
  */
 public class shape3d {
-    public double depth;
-    public double BA;
-    public double sidA(int sNum,double[] sLen, double depth){
+    
+    //variables
+    public static double depth;
+    public static double BA;
+    public double tempReplace =0;
+    
+    
+    // Functions
+    public static double sidA(int sNum,double[] sLen, double depth){
       double tempA=0;
       for(int x=0;x<sNum;x++){
         tempA=tempA+(sLen[x]*depth);
@@ -28,23 +34,27 @@ public class shape3d {
     protected void getBA(int shape){
       switch(shape){
         case 0:
-          BA=triangle.area(3,4);
+          BA=triangle.area(tempReplace,tempReplace);
           break;
         case 1:
           BA=circle.area(circle.getRad());
           break;
         case 2:
-          BA=rectangle.area(33,54);
+          BA=rectangle.area(tempReplace,tempReplace);
           break;
         default:
           System.out.println("Error area not found");
       }
     }
-
-    public void volume(){
+    
+    
+    //interface ???
+    public double volume(){
       System.out.println("The volume is: ");
+      return 0;
     }
-    public void SA(){
+    public double SA(){
       System.out.println("The Surface Area is: ");
+      return 0;
     }
 }
