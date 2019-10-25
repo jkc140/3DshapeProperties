@@ -8,16 +8,16 @@ public class pyramid extends shape3d{
   public double s;
   public double sidA(int sNum,double[] sLen){
     double tempA=0;
-    for(int x=0;x<sNum<x++){
+    for(int x=0;x<sNum;x++){
       tempA=tempA+(sLen[x]*sH);
     }
-    return tempA();
+    return tempA;
   }
   public void volume(double d){
-    v=BA*h/3;
+    v=BA*d/3;
   }
   public void SA(int sNum, double[] sLen){
-      s=BA+sidA;
+      s=BA+sidA(sNum,sLen);
 
   }
 
