@@ -12,36 +12,19 @@ import java.util.Scanner;
  * @author S331474817
  */
 public class Prop3dShapes {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-      Scanner sc=new Scanner(System.in);
-      triangle trig = new triangle();
-      circle circ=new circle();
-      rectangle rect=new rectangle();
-      String shape;
-      double BA;
-      boolean shLoop=false;
-        // TODO code application logic here
-        System.out.println("Program Commencing");
+    public static String sortShap(){
+        Scanner sc=new Scanner(System.in);
+        String shape;
+        boolean shLoop=false;
         System.out.println("What is the base shape of the 3d shape?");
         do{
           shape=sc.nextLine();
           switch(shape.toLowerCase()){
             case "triangle":
-              trig.area(5,30);
-              shLoop=true;
               break;
             case "circle":
-
-              BA=circ.area(circ.getRad());
-              shLoop=true;
               break;
-            case "rectangle":
-              rect.area(50,50);
-              shLoop=true;
+            case "rectangle":  
               break;
             default:
               System.out.println("Not a valid base shape.");
@@ -49,6 +32,35 @@ public class Prop3dShapes {
             }
 
         }while(shLoop==true);
+        return shape.toLowerCase();
+    }
+    public static double sortBA(){
+        triangle trig = new triangle();
+        circle circ=new circle();
+        rectangle rect=new rectangle();
+        double BA=0;
+        switch(sortShap()){
+            case "triangle":
+                BA= trig.area(5,30);
+                break;
+            case "circle":
+                BA= circ.area(circ.getRad());
+                break;
+            case "rectangle":  
+                BA= rect.area(50,50);
+                break;
+            default:
+                System.out.println("Error");
+        }
+        return BA;
+       }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {   
+        // TODO code application logic here
+        System.out.println("Program Commencing");
+        shape3d.getBA(sortBA());
     }
 
 }
