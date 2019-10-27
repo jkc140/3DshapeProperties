@@ -29,16 +29,20 @@ public class rectangle extends shape2d{
 
 
     public static double getWid(){
-      double wid;
-      boolean tLoop=false; 
+      double wid=0;
+      boolean tLoop=false;
+      String checker="";
       Scanner sc=new Scanner(System.in);
       do{
         System.out.println("What is the width of the rectangle");
+        checker=sc.nextLine();
         try{
-          wid=sc.nextDouble();
+          wid=Double.valueOf(checker);
+          tLoop=true;
         }
-        catch(java.util.InputMismatchException e){
+        catch(java.lang.NumberFormatException e){
           System.out.println("Invalid entry Please try again");
+          tLoop=false;
         }
       }while(tLoop==false);
       sidLen[1]=wid;
