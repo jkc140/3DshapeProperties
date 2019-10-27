@@ -15,16 +15,19 @@ public class Prop3dShapes {
     public static String sortShap(){
         Scanner sc=new Scanner(System.in);
         String shape;
-        boolean shLoop=false;
+        boolean shLoop=false; //<-- shape loop (sh + loop)
         System.out.println("What is the base shape of the 3d shape?");
         do{
           shape=sc.nextLine();
           switch(shape.toLowerCase()){
             case "triangle":
+              shLoop=true;
               break;
             case "circle":
+              shLoop=true;
               break;
-            case "rectangle":  
+            case "rectangle":
+              shLoop=true;
               break;
             default:
               System.out.println("Not a valid base shape.");
@@ -41,23 +44,26 @@ public class Prop3dShapes {
         double BA=0;
         switch(sortShap()){
             case "triangle":
-                BA= trig.area(5,30);
+                trig.getBase();
+                BA= trig.area(trig.sL[0],trig.getHeight());
                 break;
             case "circle":
                 BA= circ.area(circ.getRad());
                 break;
-            case "rectangle":  
-                BA= rect.area(50,50);
+            case "rectangle":
+                rect.getLen();
+                rect.getWid();
+                BA= rect.area(rect.length,rect.width);
                 break;
             default:
-                System.out.println("Error");
+                System.out.println("Error Error Error Cannot Compute Error Error Error");
         }
         return BA;
        }
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {   
+    public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Program Commencing");
         shape3d.getBA(sortBA());
