@@ -19,7 +19,7 @@ public class triangle extends shape2d{
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the base of the triangle");
       sL[0]=sc.nextDouble();
-      return sl[0];
+      return sL[0];
     }
 
 

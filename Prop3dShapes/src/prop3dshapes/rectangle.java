@@ -17,7 +17,7 @@ public class rectangle extends shape2d{
 
 
     //functions
-    public static void getLen(){
+    public static double getLen(){
       double len;
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the length of the rectangle");
@@ -28,7 +28,7 @@ public class rectangle extends shape2d{
     }
 
 
-    public static void getWid(){
+    public static double getWid(){
       double wid;
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the width of the rectangle");
