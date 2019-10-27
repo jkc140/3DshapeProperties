@@ -37,12 +37,12 @@ public class Prop3dShapes {
         }while(shLoop==true);
         return shape.toLowerCase();
     }
-    public static double sortBA(){
+    public static double sortBA(String shape){
         triangle trig = new triangle();
         circle circ=new circle();
         rectangle rect=new rectangle();
         double BA=0;
-        switch(sortShap()){
+        switch(shape){
             case "triangle":
                 trig.getBase();
                 BA= trig.area(trig.sL[0],trig.getHeight());
@@ -60,13 +60,57 @@ public class Prop3dShapes {
         }
         return BA;
        }
+
+       public static double sort3d(double d,double BA,int sNum,double[] sLen){
+         String shape;
+         System.out.println("What type of 3d shape are you entering (prism or pyramid)");
+         Scanner sc=new Scanner(System.in);
+         shape=nextLine();
+         switch(shape.toLowerCase){
+           case "pyramid":
+              pyramdid.getSidH();
+              System.out.println("You're shape has a volume of ");
+              System.out.print(pyramid.volume(BA,d));
+              System.out.println("You're shape has a volume of ");
+              System.out.print(pyramid.SA(BA,sNum,sLen));
+              break;
+           case "prism":
+              System.out.println("You're shape has a volume of ");
+              System.out.print(prism.volume(d,BA));
+              System.out.println("You're shape has a volume of ");
+              System.out.print(prism.SA(d,BA,sNum,sLen));
+              break;
+            default:
+              System.out.println("Error");
+         }
+       }
+       public static void sortBash(String shape){
+         switch(shape){
+             case "triangle":
+                 sort3d(shape3d.getDepth,shape3d.getBA,3,triangl.sL);
+                 break;
+             case "circle":
+                 sort3d(shape3d.getDepth,shape3d.getBA,1,circle.circ);
+                 break;
+             case "rectangle":
+                 sort3d(shape3d.getDepth,shape3d.getBA,4,rectangle.sidLen);
+                 break;
+             default:
+                 System.out.println("Error Error Error Cannot Compute Error Error Error");
+         }
+       }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        String bash=sortBA(); //<-- base shape (ba+ sh)
         // TODO code application logic here
         System.out.println("Program Commencing");
-        shape3d.getBA(sortBA());
+        shape3d.getBA(bash);
+        sortBash();
+
+
+
     }
 
 }
