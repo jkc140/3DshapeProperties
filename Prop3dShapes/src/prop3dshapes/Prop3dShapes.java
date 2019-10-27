@@ -34,7 +34,7 @@ public class Prop3dShapes {
               System.out.println("Please try again.");
             }
 
-        }while(shLoop==true);
+        }while(shLoop==false);
         return shape.toLowerCase();
     }
     public static double sortBA(String shape){
