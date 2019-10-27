@@ -44,8 +44,7 @@ public class Prop3dShapes {
         double BA=0;
         switch(shape){
             case "triangle":
-                trig.getBase();
-                return trig.area(trig.sL[0],trig.getHeight());
+                return trig.area(trig.getBase(),trig.getHeight());
                 break;
             case "circle":
                 return circ.area(circ.getRad());

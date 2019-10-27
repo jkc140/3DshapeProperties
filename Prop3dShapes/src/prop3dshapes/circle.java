@@ -27,7 +27,7 @@ public class circle extends shape2d{
     }
 
 
-    public double circ(double r){
+    public double circ(){
         return Math.PI*rad*2;
     }
 }

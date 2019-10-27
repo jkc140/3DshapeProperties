@@ -15,10 +15,11 @@ public class triangle extends shape2d{
     public static double[] sL=new double[3];
 
     //functions
-    public static void getBase(){
+    public static double getBase(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the base of the triangle");
       sL[0]=sc.nextDouble();
+      return sl[0];
     }
 
 
