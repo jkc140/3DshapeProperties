@@ -10,7 +10,7 @@ package prop3dshapes;
  * @author S331474817
  */
 public class shape2d {
-    public static double area(double x){
+    public double area(double x){
         return x;
     }
 }

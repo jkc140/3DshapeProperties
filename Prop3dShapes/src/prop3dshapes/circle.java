@@ -12,13 +12,13 @@ import java.util.Scanner;
  */
 public class circle extends shape2d{
 
-
+    public double rad;
     //functions
     public static double getRad(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the radius of the circle?: ");
-      double r=sc.nextDouble();
-      return r;
+      rad=sc.nextDouble();
+      return rad;
     }
 
 
@@ -27,7 +27,7 @@ public class circle extends shape2d{
     }
 
 
-    public static double circ(double r){
-        return Math.PI*r*2;
+    public double circ(double r){
+        return Math.PI*rad*2;
     }
 }

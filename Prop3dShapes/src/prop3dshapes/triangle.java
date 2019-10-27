@@ -40,7 +40,7 @@ public class triangle extends shape2d{
     }
 
 
-    public static double area(double b, double h){
+    public double area(double b, double h){
         return b*h/2;
     }
 }
