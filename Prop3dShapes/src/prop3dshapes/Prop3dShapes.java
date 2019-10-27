@@ -87,8 +87,8 @@ public class Prop3dShapes {
                  sort3d(shape3d.getDepth(),ba,3,triangle.sL);
                  break;
              case "circle":
-                 circle.circ()
-                 sort3d(shape3d.getDepth(),ba,1,circle.cirumf);
+                 circle.circ();
+                 sort3d(shape3d.getDepth(),ba,1,circle.circumf);
                  break;
              case "rectangle":
                  sort3d(shape3d.getDepth(),ba,4,rectangle.sidLen);
