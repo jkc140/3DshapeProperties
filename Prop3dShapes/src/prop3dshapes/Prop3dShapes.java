@@ -62,24 +62,30 @@ public class Prop3dShapes {
          String shape;
          System.out.println("What type of 3d shape are you entering (prism or pyramid)");
          Scanner sc=new Scanner(System.in);
-         shape=sc.nextLine();
-         switch(shape.toLowerCase()){
-           case "pyramid":
-              pyramid.getSidH();
-              System.out.print("You're shape has a volume of ");
-              System.out.println(pyramid.volume(BA,d));
-              System.out.print("You're shape has a volume of ");
-              System.out.println(pyramid.SA(BA,sNum,sLen));
-              break;
-           case "prism":
-              System.out.print("You're shape has a volume of ");
-              System.out.println(Prism.volume(d,BA));
-              System.out.print("You're shape has a volume of ");
-              System.out.println(Prism.SA(d,BA,sNum,sLen));
-              break;
-            default:
-              System.out.println("Error");
-         }
+         boolean shLoop=false; //<-- shape loop (sh + loop)
+         do{
+          shape=sc.nextLine();
+          switch(shape.toLowerCase()){
+            case "pyramid":
+                pyramid.getSidH();
+                System.out.print("You're shape has a volume of ");
+                System.out.println(pyramid.volume(BA,d));
+                System.out.print("You're shape has a volume of ");
+                System.out.println(pyramid.SA(BA,sNum,sLen));
+                shLoop=true;
+                break;
+              case "prism":
+                System.out.print("You're shape has a volume of ");
+                System.out.println(Prism.volume(d,BA));
+                System.out.print("You're shape has a volume of ");
+                System.out.println(Prism.SA(d,BA,sNum,sLen));
+                shLoop=true;
+                break;
+              default:
+                System.out.println("Error Invalid 3d shape");
+                System.out.println("Please try again");
+            }
+         }while(shLoop==false);
        }
        public static void sortBash(String shape,double ba){
          switch(shape){
