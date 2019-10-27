@@ -8,11 +8,11 @@ public class pyramid extends shape3d{
       System.out.println("What is the side height of the pyramid");
       sH=sc.nextDouble();
   }
-  public double volume(double d){
-    return shape3d.BA*shape3d.depth/3;
+  public double volume(double d,double ba){
+    return ba*d/3;
   }
-  public double SA(int sNum, double[] sLen ){
-    return shape3d.BA+shape3d.sidA(sNum,sLen,sH);
+  public double SA(double ba,int sNum, double[] sLen ){
+    return ba+shape3d.sidA(sNum,sLen,sH);
   }
 
 }
