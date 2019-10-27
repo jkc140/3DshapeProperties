@@ -30,9 +30,17 @@ public class rectangle extends shape2d{
 
     public static double getWid(){
       double wid;
+      boolean tLoop=false; 
       Scanner sc=new Scanner(System.in);
-      System.out.println("What is the width of the rectangle");
-      wid=sc.nextDouble();
+      do{
+        System.out.println("What is the width of the rectangle");
+        try{
+          wid=sc.nextDouble();
+        }
+        catch(java.util.InputMismatchException e){
+          System.out.println("Invalid entry Please try again");
+        }
+      }while(tLoop==false);
       sidLen[1]=wid;
       sidLen[3]=wid;
       return wid;

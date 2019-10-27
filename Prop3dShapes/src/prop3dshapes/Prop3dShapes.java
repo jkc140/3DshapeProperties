@@ -101,9 +101,9 @@ public class Prop3dShapes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      System.out.println("Program Commencing");
+
         String bash=sortShap(); //<-- base shape (ba+ sh)
-        // TODO code application logic here
-        System.out.println("Program Commencing");
         sortBash(bash,shape3d.getBA(sortBA(bash)));
 
 
