@@ -22,7 +22,7 @@ public class shape3d {
     }
     public static double getDepth(){
       Scanner sc=new Scanner(System.in);
-      System.out.println("What is the height of the 3d shape");
+      System.out.println("What is the depth of the 3d shape");
       return sc.nextDouble();
     }
     public static double getBA(double a){

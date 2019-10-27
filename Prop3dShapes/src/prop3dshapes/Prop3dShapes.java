@@ -66,16 +66,16 @@ public class Prop3dShapes {
          switch(shape.toLowerCase()){
            case "pyramid":
               pyramid.getSidH();
-              System.out.println("You're shape has a volume of ");
-              System.out.print(pyramid.volume(BA,d));
-              System.out.println("You're shape has a volume of ");
-              System.out.print(pyramid.SA(BA,sNum,sLen));
+              System.out.print("You're shape has a volume of ");
+              System.out.println(pyramid.volume(BA,d));
+              System.out.print("You're shape has a volume of ");
+              System.out.println(pyramid.SA(BA,sNum,sLen));
               break;
            case "prism":
-              System.out.println("You're shape has a volume of ");
-              System.out.print(Prism.volume(d,BA));
-              System.out.println("You're shape has a volume of ");
-              System.out.print(Prism.SA(d,BA,sNum,sLen));
+              System.out.print("You're shape has a volume of ");
+              System.out.println(Prism.volume(d,BA));
+              System.out.print("You're shape has a volume of ");
+              System.out.println(Prism.SA(d,BA,sNum,sLen));
               break;
             default:
               System.out.println("Error");
