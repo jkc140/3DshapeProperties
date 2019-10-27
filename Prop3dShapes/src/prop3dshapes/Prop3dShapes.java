@@ -87,13 +87,13 @@ public class Prop3dShapes {
        public static void sortBash(String shape){
          switch(shape){
              case "triangle":
-                 sort3d(shape3d.getDepth(),shape3d.getBA(),3,triangle.sL);
+                 sort3d(shape3d.getDepth(),shape3d.getBA(sortBA(bash)),3,triangle.sL);
                  break;
              case "circle":
-                 sort3d(shape3d.getDepth(),shape3d.getBA(),1,circle.circ);
+                 sort3d(shape3d.getDepth(),shape3d.getBA(sortBA(bash)),1,circle.circ);
                  break;
              case "rectangle":
-                 sort3d(shape3d.getDepth(),shape3d.getBA(),4,rectangle.sidLen);
+                 sort3d(shape3d.getDepth(),shape3d.getBA(sortBA(bash)),4,rectangle.sidLen);
                  break;
              default:
                  System.out.println("Error Error Error Cannot Compute Error Error Error");
@@ -106,7 +106,6 @@ public class Prop3dShapes {
         String bash=sortBA(); //<-- base shape (ba+ sh)
         // TODO code application logic here
         System.out.println("Program Commencing");
-        shape3d.getBA(sortBA(bash));
         sortBash(bash);
 
 

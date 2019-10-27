@@ -20,7 +20,7 @@ public class shape3d {
       }
       return tempA;
     }
-    public double getDepth(){
+    public static double getDepth(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the height of the 3d shape");
       return sc.nextDouble();
@@ -31,11 +31,11 @@ public class shape3d {
 
 
     //interface ???
-    public double volume(){
+    public static double volume(){
       System.out.println("The volume is: ");
       return 0;
     }
-    public double SA(){
+    public static double SA(){
       System.out.println("The Surface Area is: ");
       return 0;
     }
