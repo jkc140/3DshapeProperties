@@ -11,13 +11,7 @@ import prop3dshapes.*;
  * @author S331474817
  */
 public class shape3d {
-    
-    //variables
-    public static double depth;
-    public static double BA;
-    public double tempReplace =0;
-    
-    
+
     // Functions
     public static double sidA(int sNum,double[] sLen, double depth){
       double tempA=0;
@@ -26,16 +20,16 @@ public class shape3d {
       }
       return tempA;
     }
-    protected void getDepth(){
+    public double getDepth(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the height of the 3d shape");
-      depth=sc.nextDouble();
+      return=sc.nextDouble();
     }
-    public static void getBA(double a){
-        BA=a;
+    public static double getBA(double a){
+        return a;
     }
-    
-    
+
+
     //interface ???
     public double volume(){
       System.out.println("The volume is: ");
