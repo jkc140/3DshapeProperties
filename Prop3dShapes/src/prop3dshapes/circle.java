@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class circle extends shape2d{
 
     public static double rad;
+    public static double[] circumf=new double[]
     //functions
     public static double getRad(){
       Scanner sc=new Scanner(System.in);
@@ -22,12 +23,12 @@ public class circle extends shape2d{
     }
 
 
-    public static double area(double r){
+    public double area(double r){
         return r*r*Math.PI;
     }
 
 
-    public static double circ(){
-        return Math.PI*rad*2;
+    public static void circ(){
+        cirumf[0]=Math.PI*rad*2;
     }
 }

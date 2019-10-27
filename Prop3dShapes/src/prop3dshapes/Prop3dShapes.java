@@ -44,17 +44,18 @@ public class Prop3dShapes {
         double BA=0;
         switch(shape){
             case "triangle":
-                return trig.area(trig.getBase(),trig.getHeight());
+                BA= trig.area(trig.getBase(),trig.getHeight());
                 break;
             case "circle":
-                return circ.area(circ.getRad());
+                BA= circ.area(circ.getRad());
                 break;
             case "rectangle":
-                return rect.area(rect.getLen(),rect.getWid());
-                break;
+                 BA= rect.area(rect.getLen(),rect.getWid());
+                 break;
             default:
                 System.out.println("Error Error Error Cannot Compute Error Error Error");
         }
+        return BA;
        }
 
        public static void sort3d(double d,double BA,int sNum,double[] sLen){
@@ -86,7 +87,8 @@ public class Prop3dShapes {
                  sort3d(shape3d.getDepth(),ba,3,triangle.sL);
                  break;
              case "circle":
-                 sort3d(shape3d.getDepth(),ba,1,circle.circ());
+                 circle.circ()
+                 sort3d(shape3d.getDepth(),ba,1,circle.cirumf);
                  break;
              case "rectangle":
                  sort3d(shape3d.getDepth(),ba,4,rectangle.sidLen);
