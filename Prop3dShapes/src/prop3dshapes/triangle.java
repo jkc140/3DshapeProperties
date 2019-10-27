@@ -18,14 +18,14 @@ public class triangle extends shape2d{
     public static void getBase(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the base of the triangle");
-      sL[0]=nextDouble();
+      sL[0]=sc.nextDouble();
     }
 
 
     public static double getHeight(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the heigth of the triangle");
-      return =nextDouble();
+      return sc.nextDouble();
 
     }
 
@@ -33,9 +33,9 @@ public class triangle extends shape2d{
     public static void getSid(){
         Scanner sc=new Scanner(System.in);
         System.out.println("What is the hypotenous of the triangle");
-        sL[1]=nextDouble();
+        sL[1]=sc.nextDouble();
         System.out.println("What is the other side length of the triangle (Excluding base)");
-        sL[2]=nextDouble();
+        sL[2]=sc.nextDouble();
 
     }
 

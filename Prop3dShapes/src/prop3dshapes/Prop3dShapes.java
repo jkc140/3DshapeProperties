@@ -78,7 +78,7 @@ public class Prop3dShapes {
               System.out.println("You're shape has a volume of ");
               System.out.print(Prism.volume(d,BA));
               System.out.println("You're shape has a volume of ");
-              System.out.print(prism.SA(d,BA,sNum,sLen));
+              System.out.print(Prism.SA(d,BA,sNum,sLen));
               break;
             default:
               System.out.println("Error");
@@ -90,10 +90,10 @@ public class Prop3dShapes {
                  sort3d(shape3d.getDepth(),shape3d.getBA(),3,triangle.sL);
                  break;
              case "circle":
-                 sort3d(shape3d.getDepth,shape3d.getBA,1,circle.circ);
+                 sort3d(shape3d.getDepth(),shape3d.getBA(),1,circle.circ);
                  break;
              case "rectangle":
-                 sort3d(shape3d.getDepth,shape3d.getBA,4,rectangle.sidLen);
+                 sort3d(shape3d.getDepth(),shape3d.getBA(),4,rectangle.sidLen);
                  break;
              default:
                  System.out.println("Error Error Error Cannot Compute Error Error Error");
@@ -106,8 +106,8 @@ public class Prop3dShapes {
         String bash=sortBA(); //<-- base shape (ba+ sh)
         // TODO code application logic here
         System.out.println("Program Commencing");
-        shape3d.getBA(bash);
-        sortBash();
+        shape3d.getBA(sortBA(bash));
+        sortBash(bash);
 
 
 
