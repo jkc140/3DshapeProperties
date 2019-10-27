@@ -14,7 +14,7 @@ public class rectangle extends shape2d{
     //variables
     public double length;
     public double width;
-    public double[] sidLen =new double[2];
+    public double[] sidLen =new double[4];
 
 
     //functions
@@ -23,6 +23,7 @@ public class rectangle extends shape2d{
       System.out.println("What is the length of the rectangle");
       length=sc.nextDouble();
       sidLen[0]=length;
+      sidLen[2]=length;
     }
 
 
@@ -31,6 +32,7 @@ public class rectangle extends shape2d{
       System.out.println("What is the width of the rectangle");
       width=sc.nextDouble();
       sidLen[1]=width;
+      sidLen[3]=width;
     }
 
 
