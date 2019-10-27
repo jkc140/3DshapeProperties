@@ -21,9 +21,26 @@ public class shape3d {
       return tempA;
     }
     public static double getDepth(){
+      boolean tLoop=false;
+      String checker="";
+      double dep=0;
       Scanner sc=new Scanner(System.in);
-      System.out.println("What is the depth of the 3d shape");
-      return sc.nextDouble();
+      do{
+        System.out.println("What is the depth of the 3d shape");
+        checker=sc.nextLine();
+        try{
+          dep=Double.valueOf(checker);
+          tLoop=true;
+        }
+        catch(java.lang.NumberFormatException e){
+          System.out.println("Invalid entry Please try again");
+          tLoop=false;
+        }
+        finally{
+          checker="";
+        }
+      }while(tLoop==false);
+      return dep;
     }
     public static double getBA(double a){
         return a;

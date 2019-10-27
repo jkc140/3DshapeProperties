@@ -2,11 +2,27 @@ package shape3d;
 import java.util.Scanner;
 
 public class pyramid extends shape3d{
-  public static double sH;
+  public static double sH=0;
   public static void getSidH(){
+      boolean tLoop=false;
+      String checker="";
       Scanner sc = new Scanner(System.in);
-      System.out.println("What is the side height of the pyramid");
-      sH=sc.nextDouble();
+      do{
+        System.out.println("What is the side height of the pyramid");
+        checker=sc.nextLine();
+        try{
+          sH=Double.valueOf(checker);
+          tLoop=true;
+        }
+        catch(java.lang.NumberFormatException e){
+          System.out.println("Invalid entry Please try again");
+          tLoop=false;
+        }
+        finally{
+          checker="";
+        }
+      }while(tLoop==false);
+
   }
   public static double volume(double d,double ba){
     return ba*d/3;

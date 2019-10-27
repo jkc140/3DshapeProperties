@@ -16,9 +16,25 @@ public class circle extends shape2d{
     public static double[] circumf=new double[1];
     //functions
     public static double getRad(){
+      boolean tLoop=false;
+      String checker="";
       Scanner sc=new Scanner(System.in);
-      System.out.println("What is the radius of the circle?: ");
-      rad=sc.nextDouble();
+      
+      do{
+        System.out.println("What is the radius of the circle?: ");
+        checker=sc.nextLine();
+        try{
+          rad=Double.valueOf(checker);
+          tLoop=true;
+        }
+        catch(java.lang.NumberFormatException e){
+          System.out.println("Invalid entry Please try again");
+          tLoop=false;
+        }
+        finally{
+          checker="";
+        }
+      }while(tLoop==false);
       return rad;
     }
 

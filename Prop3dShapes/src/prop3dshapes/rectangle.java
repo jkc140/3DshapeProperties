@@ -18,10 +18,25 @@ public class rectangle extends shape2d{
 
     //functions
     public static double getLen(){
-      double len;
+      double len=0;
+      boolean tLoop=false;
+      String checker="";
       Scanner sc=new Scanner(System.in);
-      System.out.println("What is the length of the rectangle");
-      len = sc.nextDouble();
+      do{
+        System.out.println("What is the length of the rectangle");
+        checker=sc.nextLine();
+        try{
+          len=Double.valueOf(checker);
+          tLoop=true;
+        }
+        catch(java.lang.NumberFormatException e){
+          System.out.println("Invalid entry Please try again");
+          tLoop=false;
+        }
+        finally{
+          checker="";
+        }
+      }while(tLoop==false);
       sidLen[0]=len;
       sidLen[2]=len;
       return len;
@@ -43,6 +58,9 @@ public class rectangle extends shape2d{
         catch(java.lang.NumberFormatException e){
           System.out.println("Invalid entry Please try again");
           tLoop=false;
+        }
+        finally{
+          checker="";
         }
       }while(tLoop==false);
       sidLen[1]=wid;
