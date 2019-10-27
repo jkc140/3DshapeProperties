@@ -45,20 +45,17 @@ public class Prop3dShapes {
         switch(shape){
             case "triangle":
                 trig.getBase();
-                BA= trig.area(trig.sL[0],trig.getHeight());
+                return trig.area(trig.sL[0],trig.getHeight());
                 break;
             case "circle":
-                BA= circ.area(circ.getRad());
+                return circ.area(circ.getRad());
                 break;
             case "rectangle":
-                rect.getLen();
-                rect.getWid();
-                BA= rect.area(rect.length,rect.width);
+                return rect.area(rect.getLen(),rect.getWid());
                 break;
             default:
                 System.out.println("Error Error Error Cannot Compute Error Error Error");
         }
-        return BA;
        }
 
        public static void sort3d(double d,double BA,int sNum,double[] sLen){
@@ -90,7 +87,7 @@ public class Prop3dShapes {
                  sort3d(shape3d.getDepth(),ba,3,triangle.sL);
                  break;
              case "circle":
-                 sort3d(shape3d.getDepth(),ba,1,circle.circ);
+                 sort3d(shape3d.getDepth(),ba,1,circle.circ());
                  break;
              case "rectangle":
                  sort3d(shape3d.getDepth(),ba,4,rectangle.sidLen);
@@ -103,7 +100,7 @@ public class Prop3dShapes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String bash=sortBA(); //<-- base shape (ba+ sh)
+        String bash=sortShap(); //<-- base shape (ba+ sh)
         // TODO code application logic here
         System.out.println("Program Commencing");
         sortBash(bash,shape3d.getBA(sortBA(bash)));
