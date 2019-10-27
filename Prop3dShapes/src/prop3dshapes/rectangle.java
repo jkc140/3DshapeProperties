@@ -12,13 +12,13 @@ import java.util.Scanner;
 public class rectangle extends shape2d{
 
     //variables
-    public double length;
-    public double width;
-    public double[] sidLen =new double[4];
+    public static double length;
+    public static double width;
+    public static double[] sidLen =new double[4];
 
 
     //functions
-    public static getLen(){
+    public static void getLen(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the length of the rectangle");
       length=sc.nextDouble();
@@ -27,7 +27,7 @@ public class rectangle extends shape2d{
     }
 
 
-    public static getWid(){
+    public static void getWid(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the width of the rectangle");
       width=sc.nextDouble();

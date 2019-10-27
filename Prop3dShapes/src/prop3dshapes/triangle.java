@@ -12,26 +12,25 @@ import java.util.Scanner;
 public class triangle extends shape2d{
 
     //variables
-    public double height;
-    public double[] sL=new double[3];
+    public static double[] sL=new double[3];
 
     //functions
-    public void getBase(){
+    public static void getBase(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the base of the triangle");
       sL[0]=nextDouble();
     }
 
 
-    public void getHeight(){
+    public static double getHeight(){
       Scanner sc=new Scanner(System.in);
       System.out.println("What is the heigth of the triangle");
-      height=nextDouble();
+      return =nextDouble();
 
     }
 
 
-    public void getSid(){
+    public static void getSid(){
         Scanner sc=new Scanner(System.in);
         System.out.println("What is the hypotenous of the triangle");
         sL[1]=nextDouble();

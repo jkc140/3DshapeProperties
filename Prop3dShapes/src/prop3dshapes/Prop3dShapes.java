@@ -65,10 +65,10 @@ public class Prop3dShapes {
          String shape;
          System.out.println("What type of 3d shape are you entering (prism or pyramid)");
          Scanner sc=new Scanner(System.in);
-         shape=nextLine();
-         switch(shape.toLowerCase){
+         shape=sc.nextLine();
+         switch(shape.toLowerCase()){
            case "pyramid":
-              pyramdid.getSidH();
+              pyramid.getSidH();
               System.out.println("You're shape has a volume of ");
               System.out.print(pyramid.volume(BA,d));
               System.out.println("You're shape has a volume of ");
@@ -76,7 +76,7 @@ public class Prop3dShapes {
               break;
            case "prism":
               System.out.println("You're shape has a volume of ");
-              System.out.print(prism.volume(d,BA));
+              System.out.print(Prism.volume(d,BA));
               System.out.println("You're shape has a volume of ");
               System.out.print(prism.SA(d,BA,sNum,sLen));
               break;
@@ -87,7 +87,7 @@ public class Prop3dShapes {
        public static void sortBash(String shape){
          switch(shape){
              case "triangle":
-                 sort3d(shape3d.getDepth,shape3d.getBA,3,triangl.sL);
+                 sort3d(shape3d.getDepth(),shape3d.getBA(),3,triangle.sL);
                  break;
              case "circle":
                  sort3d(shape3d.getDepth,shape3d.getBA,1,circle.circ);
