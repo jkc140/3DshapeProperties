@@ -12,19 +12,19 @@ import java.util.Scanner;
  */
 public class circle extends shape2d{
 
-    public static double rad;
-    public static double[] circumf=new double[1];
+    public double radius;
+    circumference=new double[1];
     //functions
-    public static double getRad(){
+    public void getProps(){
       boolean tLoop=false;
       String checker="";
       Scanner sc=new Scanner(System.in);
-      
+
       do{
         System.out.println("What is the radius of the circle?: ");
         checker=sc.nextLine();
         try{
-          rad=Double.valueOf(checker);
+          radius=Double.valueOf(checker);
           tLoop=true;
         }
         catch(java.lang.NumberFormatException e){
@@ -35,16 +35,10 @@ public class circle extends shape2d{
           checker="";
         }
       }while(tLoop==false);
-      return rad;
+      circumference[0]=Math.PI*radius*2;
     }
 
-
-    public double area(double r){
-        return r*r*Math.PI;
-    }
-
-
-    public static void circ(){
-        circumf[0]=Math.PI*rad*2;
+    public void area(double r){
+        return radius*radius*Math.PI;
     }
 }
