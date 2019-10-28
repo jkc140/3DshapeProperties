@@ -12,69 +12,34 @@ import java.util.Scanner;
 public class triangle extends shape2d{
 
     //variables
-    public static double[] sL=new double[3];
-
+    sideLen=new double[3];
+    public double height;
     //functions
-    public static double getBase(){
+    public void getProps(){
       boolean tLoop=false;
       String checker="";
-      double b=0;
-      Scanner sc=new Scanner(System.in);
-      do{
-        System.out.println("What is the base of the triangle");
-        checker=sc.nextLine();
-        try{
-          b=Double.valueOf(checker);
-          tLoop=true;
-        }
-        catch(java.lang.NumberFormatException e){
-          System.out.println("Invalid entry Please try again");
-          tLoop=false;
-        }
-        finally{
-          checker="";
-        }
-      }while(tLoop==false);
-
-      sL[0]=b;
-      return sL[0];
-    }
-
-
-    public static double getHeight(){
-      boolean tLoop=false;
-      String checker="";
-      double h=0;
-      Scanner sc=new Scanner(System.in);
-      do{
-        System.out.println("What is the heigth of the triangle");
-        checker=sc.nextLine();
-        try{
-          h=Double.valueOf(checker);
-          tLoop=true;
-        }
-        catch(java.lang.NumberFormatException e){
-          System.out.println("Invalid entry Please try again");
-          tLoop=false;
-        }
-        finally{
-          checker="";
-        }
-      }while(tLoop==false);
-      return h;
-    }
-
-
-    public static void getSid(){
-        boolean tLoop=false;
-        String checker="";
-        double tempHold=0;
-        Scanner sc=new Scanner(System.in);
+      double tempVal;
+      for(int x=0;x<=4;x++){
         do{
-          System.out.println("What is the hypotenous of the triangle");
+          switch(x){
+            case 0:
+              System.out.println("What is the base of the triangle");
+            case 1:
+              System.out.println("What is the hypotenous of the triangle");
+            case 2:
+              System.out.println("What is the last side of the triangle");
+            default:
+              System.out.println("What is the height of the triangle");
+          }
           checker=sc.nextLine();
           try{
-            tempHold=Double.valueOf(checker);
+            switch(x){
+              case 4:
+                height=Double.valueOf(checker);
+                break;
+              default:
+                sideLen[x]=Double.valueOf(checker);
+            }
             tLoop=true;
           }
           catch(java.lang.NumberFormatException e){
@@ -85,29 +50,10 @@ public class triangle extends shape2d{
             checker="";
           }
         }while(tLoop==false);
-          sL[1]=tempHold;
-
-        do{
-          System.out.println("What is the other side length of the triangle (Excluding base)");
-          checker=sc.nextLine();
-          try{
-            tempHold=Double.valueOf(checker);
-            tLoop=true;
-          }
-          catch(java.lang.NumberFormatException e){
-            System.out.println("Invalid entry Please try again");
-            tLoop=false;
-          }
-          finally{
-            checker="";
-          }
-        }while(tLoop==false);
-        sL[2]=tempHold;
-
+      }
     }
 
-
-    public double area(double b, double h){
-        return b*h/2;
+    public void area(){
+        baseArea=sidLen[0]*height/2;
     }
 }
