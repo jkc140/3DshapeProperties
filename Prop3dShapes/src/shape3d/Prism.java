@@ -17,7 +17,7 @@ public class Prism extends shape3d{
     }
 
     public double SA(shape2d inst2dShape){
-        return (2*baseArea) + sidA(inst2dShape.sideLen.length,inst2dShape.sideLen,depth);
+        return (2*baseArea) + sideA(inst2dShape.sideLen.length,inst2dShape.sideLen,depth);
     }
 
 }
