@@ -10,12 +10,12 @@ package shape3d;
  * @author S331474817
  */
 public class Prism {
-    public static double volume(double d,double ba){
-        return ba*d;
+    public void volume(){
+        volume= baseArea*depth;
     }
 
-    public static double SA(double d,double ba,int sNum,double[]sLen){
-        return(2*ba)+shape3d.sidA(sNum,sLen,d);
+    public void SA(shape2d inst2dShape){
+        SA= (2*baseArea)+sidA(inst2dShape.sideLen.length,inst2dShape.sideLen,depth);
     }
 
 }
