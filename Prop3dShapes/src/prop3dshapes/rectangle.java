@@ -13,63 +13,42 @@ public class rectangle extends shape2d{
 
     //variables
 
-    public static double[] sidLen =new double[4];
-
+    sideLen =new double[4];
 
     //functions
-    public static double getLen(){
-      double len=0;
+
+    public void getProps(){
       boolean tLoop=false;
       String checker="";
       Scanner sc=new Scanner(System.in);
-      do{
-        System.out.println("What is the length of the rectangle");
-        checker=sc.nextLine();
-        try{
-          len=Double.valueOf(checker);
-          tLoop=true;
-        }
-        catch(java.lang.NumberFormatException e){
-          System.out.println("Invalid entry Please try again");
-          tLoop=false;
-        }
-        finally{
-          checker="";
-        }
-      }while(tLoop==false);
-      sidLen[0]=len;
-      sidLen[2]=len;
-      return len;
+      for(int x=0;x<=2;x++){
+        do{
+          switch(x){
+            case 0:
+              System.out.println("What is the length of the rectangle");
+            case 1:
+              System.out.println("What is the width of the rectangle");
+            default:
+              System.out.println("No more");
+          }
+          checker=sc.nextLine();
+          try{
+            sideLen[x]=Double.valueOf(checker);
+            sideLen[x+2]=sLen[x];
+            tLoop=true;
+          }
+          catch(java.lang.NumberFormatException e){
+            System.out.println("Invalid entry Please try again");
+            tLoop=false;
+          }
+          finally{
+            checker="";
+          }
+        }while(tLoop==false);
+      }
     }
 
-
-    public static double getWid(){
-      double wid=0;
-      boolean tLoop=false;
-      String checker="";
-      Scanner sc=new Scanner(System.in);
-      do{
-        System.out.println("What is the width of the rectangle");
-        checker=sc.nextLine();
-        try{
-          wid=Double.valueOf(checker);
-          tLoop=true;
-        }
-        catch(java.lang.NumberFormatException e){
-          System.out.println("Invalid entry Please try again");
-          tLoop=false;
-        }
-        finally{
-          checker="";
-        }
-      }while(tLoop==false);
-      sidLen[1]=wid;
-      sidLen[3]=wid;
-      return wid;
-    }
-
-
-    public double area(double l, double w){
-        return l*w;
+    public void area(){
+        baseArea = sideLen[0]*sideLen[1];
     }
 }
