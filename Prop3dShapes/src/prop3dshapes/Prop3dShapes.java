@@ -16,7 +16,7 @@ public class Prop3dShapes {
         Scanner sc=new Scanner(System.in);
         String shape;
         boolean shLoop=false; //<-- shape loop (sh + loop)
-        System.out.println("What is the base shape of the 3d shape?");
+        System.out.println("What is the base shape of the 3d shape? (triangle, rectangle or square)");
         do{
           shape=sc.nextLine();
           switch(shape.toLowerCase()){
