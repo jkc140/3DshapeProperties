@@ -16,7 +16,7 @@ public class Prop3dShapes {
 
       //variables
       Scanner sc=new Scanner(System.in); //initiating the scanner module and calling it sc
-      shape2d inst2dShape; // declaring a variable of type shape2d (creating a variable that is of class shape2d)
+      shape2d inst2dShape = null; // declaring a variable of type shape2d (creating a variable that is of class shape2d)
       boolean shapeCheck =false; //declaring a boolean variable to see if the input is good or not
       String shape; //declaring a string variable to hold the user input
 
@@ -51,7 +51,7 @@ public class Prop3dShapes {
 
       //variables
       Scanner sc=new Scanner(System.in); //same as previous declaration
-      shape3d inst3dShape; //creating a variable of type shape3d
+      shape3d inst3dShape =null; //creating a variable of type shape3d
       String shape; //same as getBaseShape declaration
       boolean shapeCheck =false; //same as getBaseShape declaration
 
