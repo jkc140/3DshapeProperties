@@ -12,15 +12,18 @@ import java.util.Scanner;
 public class triangle extends shape2d{
 
     //variables
-    sideLen=new double[3];
     public double height;
     //functions
+	public triangle() {
+		sideLen=new double[3];
+	}
     public void getProps(){
+      Scanner sc=new Scanner(System.in);
       boolean tLoop=false;
       String checker="";
       double tempVal;
-      for(int x=0;x<=4;x++){
-        do{
+      for(int x=0;x<4;x++){
+    	  while(tLoop==false){
           switch(x){
             case 0:
               System.out.println("What is the base of the triangle");
@@ -31,13 +34,14 @@ public class triangle extends shape2d{
             case 2:
               System.out.println("What is the last side of the triangle");
               break;
-            default:
+            case 3:
               System.out.println("What is the height of the triangle");
+              break;
           }
           checker=sc.nextLine();
           try{
             switch(x){
-              case 4:
+              case 3:
                 height=Double.valueOf(checker);
                 break;
               default:
@@ -52,11 +56,12 @@ public class triangle extends shape2d{
           finally{
             checker="";
           }
-        }while(tLoop==false);
+        }
+    	  tLoop=false;
       }
     }
 
     public double area(){
-        return sidLen[0]*height/2;
+        return sideLen[0]*height/2;
     }
 }

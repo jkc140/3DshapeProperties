@@ -6,14 +6,15 @@
 package shape3d;
 import java.util.Scanner;
 import prop3dshapes.*;
+import prop3dshapes.*;
 /**
  *
  * @author S331474817
  */
 public class shape3d {
     public double faceArea=0;
-    public double depth;
-    public double baseArea;
+    public double depth=0;
+    public double baseArea=0;
     public double volume;
     public double SA;
     // Functions
@@ -21,6 +22,7 @@ public class shape3d {
       for(int x=0;x<sNum;x++){
         faceArea=faceArea+(sLen[x]*depth);
       }
+      return faceArea;
     }
 
     public void getDepth(){
@@ -50,6 +52,12 @@ public class shape3d {
     }
 
     //interface ???
-    public volume();
-    public SA();
+    public double volume() {
+    	return 0;
+    }
+    public double SA(shape2d inst2dShape) {
+    	System.out.println("Not being override");
+    	return 0;
+    }
+    
 }

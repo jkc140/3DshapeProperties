@@ -13,15 +13,18 @@ public class rectangle extends shape2d{
 
     //variables
 
-    sideLen =new double[4];
+    
+	
 
     //functions
-
+	public  rectangle() {
+		sideLen =new double[4];
+	}
     public void getProps(){
       boolean tLoop=false;
       String checker="";
       Scanner sc=new Scanner(System.in);
-      for(int x=0;x<=2;x++){
+      for(int x=0;x<2;x++){
         do{
           switch(x){
             case 0:
@@ -36,7 +39,7 @@ public class rectangle extends shape2d{
           checker=sc.nextLine();
           try{
             sideLen[x]=Double.valueOf(checker);
-            sideLen[x+2]=sLen[x];
+            sideLen[x+2]=sideLen[x];
             tLoop=true;
           }
           catch(java.lang.NumberFormatException e){
@@ -50,7 +53,7 @@ public class rectangle extends shape2d{
       }
     }
 
-    public void area(){
-        baseArea = sideLen[0]*sideLen[1];
+    public double area(){
+        return sideLen[0]*sideLen[1];
     }
 }

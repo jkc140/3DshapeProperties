@@ -1,6 +1,8 @@
 package shape3d;
 import java.util.Scanner;
 
+import prop3dshapes.shape2d;
+
 public class pyramid extends shape3d{
   public double faceHeight=0;
   public void getSidH(){
@@ -26,11 +28,11 @@ public class pyramid extends shape3d{
 
 
   }
-  public void volume(){
-    volume= baseArea*depth/3;
+  public double volume(){
+    return baseArea*depth/3;
   }
-  public void SA(shape2d inst2dShape ){
-    SA= baseArea+sidA(inst2dShape.sideLen.length,inst2dShape.sideLen[],faceHeight);
+  public double SA(shape2d inst2dShape ){
+    return baseArea+sidA(inst2dShape.sideLen.length,inst2dShape.sideLen,faceHeight);
   }
 
 }

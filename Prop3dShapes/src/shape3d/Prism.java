@@ -5,17 +5,19 @@
  */
 package shape3d;
 
+import prop3dshapes.shape2d;
+
 /**
  *
  * @author S331474817
  */
-public class Prism {
-    public void volume(){
-        volume= baseArea*depth;
+public class Prism extends shape3d{
+    public double volume(){
+        return baseArea*depth;
     }
 
-    public void SA(shape2d inst2dShape){
-        SA= (2*baseArea)+sidA(inst2dShape.sideLen.length,inst2dShape.sideLen,depth);
+    public double SA(shape2d inst2dShape){
+        return (2*baseArea) + sidA(inst2dShape.sideLen.length,inst2dShape.sideLen,depth);
     }
 
 }

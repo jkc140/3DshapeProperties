@@ -12,6 +12,9 @@ package prop3dshapes;
 public class shape2d {
     public double baseArea;
     public double[] sideLen;
-    public area();
-    public getProps();
-}
+    public double area() {
+    	return 0;
+    }
+    public void getProps() {
+    	}
+    }
