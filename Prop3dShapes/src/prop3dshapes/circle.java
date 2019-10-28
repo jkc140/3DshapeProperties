@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class circle extends shape2d{
 
     public double radius;
-    circumference=new double[1];
+    sidLen=new double[1];
     //functions
     public void getProps(){
       boolean tLoop=false;
@@ -35,10 +35,10 @@ public class circle extends shape2d{
           checker="";
         }
       }while(tLoop==false);
-      circumference[0]=Math.PI*radius*2;
+      sideLen[0]=Math.PI*radius*2;
     }
 
-    public void area(double r){
+    public void area(){
         return radius*radius*Math.PI;
     }
 }
