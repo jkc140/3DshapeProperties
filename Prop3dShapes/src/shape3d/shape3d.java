@@ -11,16 +11,19 @@ import prop3dshapes.*;
  * @author S331474817
  */
 public class shape3d {
-
+    public double faceArea=0;
+    public double depth;
+    public double baseArea;
+    public double volume;
+    public double SA;
     // Functions
-    public static double sidA(int sNum,double[] sLen, double depth){
-      double tempA=0;
+    public double sidA(int sNum,double[] sLen, double depth){
       for(int x=0;x<sNum;x++){
-        tempA=tempA+(sLen[x]*depth);
+        faceArea=faceArea+(sLen[x]*depth);
       }
-      return tempA;
     }
-    public static double getDepth(){
+
+    public void getDepth(){
       boolean tLoop=false;
       String checker="";
       double dep=0;
@@ -29,7 +32,7 @@ public class shape3d {
         System.out.println("What is the depth of the 3d shape");
         checker=sc.nextLine();
         try{
-          dep=Double.valueOf(checker);
+          depth=Double.valueOf(checker);
           tLoop=true;
         }
         catch(java.lang.NumberFormatException e){
@@ -40,20 +43,13 @@ public class shape3d {
           checker="";
         }
       }while(tLoop==false);
-      return dep;
-    }
-    public static double getBA(double a){
-        return a;
     }
 
+    public void setBase(shape2d inst2dShape){
+      baseArea=inst2dShape.area();
+    }
 
     //interface ???
-    public static double volume(){
-      System.out.println("The volume is: ");
-      return 0;
-    }
-    public static double SA(){
-      System.out.println("The Surface Area is: ");
-      return 0;
-    }
+    public volume();
+    public SA();
 }
