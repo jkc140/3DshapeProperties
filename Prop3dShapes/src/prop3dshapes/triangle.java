@@ -53,7 +53,7 @@ public class triangle extends shape2d{
       }
     }
 
-    public void area(){
-        baseArea=sidLen[0]*height/2;
+    public double area(){
+        return sidLen[0]*height/2;
     }
 }
