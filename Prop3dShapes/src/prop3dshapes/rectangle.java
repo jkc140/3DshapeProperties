@@ -26,8 +26,10 @@ public class rectangle extends shape2d{
           switch(x){
             case 0:
               System.out.println("What is the length of the rectangle");
+              break;
             case 1:
               System.out.println("What is the width of the rectangle");
+              break;
             default:
               System.out.println("No more");
           }

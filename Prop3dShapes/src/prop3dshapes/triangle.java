@@ -24,10 +24,13 @@ public class triangle extends shape2d{
           switch(x){
             case 0:
               System.out.println("What is the base of the triangle");
+              break;
             case 1:
               System.out.println("What is the hypotenous of the triangle");
+              break;
             case 2:
               System.out.println("What is the last side of the triangle");
+              break;
             default:
               System.out.println("What is the height of the triangle");
           }
